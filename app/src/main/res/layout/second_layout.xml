@@ -14,9 +14,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:hint="Name"
             android:text="@string/enter_name_text_view"
-            android:textStyle="bold"
-            android:hint="Name"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/users_name_edit_text"
@@ -34,16 +34,16 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="31dp"
             android:onClick="onSendUsersName"
-            android:text="@string/enter_name_button"
-            android:layout_marginRight="31dp"/>
+            android:text="@string/enter_name_button" />
 
         <TextView
             android:id="@+id/calling_activity_info_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/calling_activity_message"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 </LinearLayout>
