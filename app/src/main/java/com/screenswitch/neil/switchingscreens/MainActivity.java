@@ -43,6 +43,6 @@ public class MainActivity extends ActionBarActivity {
         final int result = 1;
 
         getNameScreenIntent.putExtra("callingActivity", "MainActivity"); //to send string data over to new activity
-        startActivity(getNameScreenIntent);
+        startActivityForResult(getNameScreenIntent, result); //IF YOU EXPECT DATA BACK, if not then use: startActivity(getScreenNameIntent);
     }
 }

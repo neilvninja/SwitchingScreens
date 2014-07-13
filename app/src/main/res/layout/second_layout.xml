@@ -14,7 +14,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/enter_name_text_view" />
+            android:text="@string/enter_name_text_view"
+            android:textStyle="bold"
+            android:hint="Name"/>
 
         <EditText
             android:id="@+id/users_name_edit_text"
