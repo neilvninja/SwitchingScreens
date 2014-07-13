@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -36,6 +37,7 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
     public void onGetNameClick(View view) { //when "Go get it!" button is clicked
 
         Intent getNameScreenIntent = new Intent(this, SecondScreen.class);
@@ -43,6 +45,16 @@ public class MainActivity extends ActionBarActivity {
         final int result = 1;
 
         getNameScreenIntent.putExtra("callingActivity", "MainActivity"); //to send string data over to new activity
-        startActivityForResult(getNameScreenIntent, result); //IF YOU EXPECT DATA BACK, if not then use: startActivity(getScreenNameIntent);
+        startActivityForResult(getNameScreenIntent, result); //USE IF YOU EXPECT DATA BACK, if not then use: startActivity(getScreenNameIntent);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        TextView usersNameMessage = (TextView) findViewById(R.id.users_name_message);
+
+        String nameSentBack = data.getStringExtra("usersName");
+        usersNameMessage.append(nameSentBack);
     }
 }

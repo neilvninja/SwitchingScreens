@@ -19,7 +19,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:onClick="onGetNameClick"
-        android:text="Go get it!" />
+        android:text="Go get it!"
+        android:textSize="30sp"/>
 
     <TextView
         android:id="@+id/users_name_message"
