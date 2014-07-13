@@ -49,12 +49,12 @@ public class MainActivity extends ActionBarActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) { //to get data send back
         super.onActivityResult(requestCode, resultCode, data);
 
         TextView usersNameMessage = (TextView) findViewById(R.id.users_name_message);
 
         String nameSentBack = data.getStringExtra("usersName");
-        usersNameMessage.append(nameSentBack);
+        usersNameMessage.append(" " + nameSentBack);
     }
 }
